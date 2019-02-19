@@ -13,6 +13,8 @@
 		9045D18F22190E1500AB7291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9045D18D22190E1500AB7291 /* Main.storyboard */; };
 		9045D19B22190E1500AB7291 /* Screenshot_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045D19A22190E1500AB7291 /* Screenshot_BuilderTests.swift */; };
 		9045D1A622190E1500AB7291 /* Screenshot_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045D1A522190E1500AB7291 /* Screenshot_BuilderUITests.swift */; };
+		9045D1B4221913D100AB7291 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045D1B3221913D100AB7291 /* DragView.swift */; };
+		9045D1B7221B89D500AB7291 /* ScreenshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045D1B6221B89D500AB7291 /* ScreenshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		9045D1A122190E1500AB7291 /* Screenshot BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Screenshot BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9045D1A522190E1500AB7291 /* Screenshot_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot_BuilderUITests.swift; sourceTree = "<group>"; };
 		9045D1A722190E1500AB7291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9045D1B3221913D100AB7291 /* DragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		9045D1B5221A56A300AB7291 /* Screenshot Builder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Screenshot Builder.entitlements"; sourceTree = "<group>"; };
+		9045D1B6221B89D500AB7291 /* ScreenshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,12 +101,15 @@
 		9045D18622190E1300AB7291 /* Screenshot Builder */ = {
 			isa = PBXGroup;
 			children = (
+				9045D1B5221A56A300AB7291 /* Screenshot Builder.entitlements */,
+				9045D1B3221913D100AB7291 /* DragView.swift */,
 				9045D18722190E1300AB7291 /* AppDelegate.swift */,
 				9045D18922190E1300AB7291 /* ViewController.swift */,
 				9045D18B22190E1500AB7291 /* Assets.xcassets */,
 				9045D18D22190E1500AB7291 /* Main.storyboard */,
 				9045D19022190E1500AB7291 /* Info.plist */,
 				9045D19122190E1500AB7291 /* Screenshot_Builder.entitlements */,
+				9045D1B6221B89D500AB7291 /* ScreenshotHelper.swift */,
 			);
 			path = "Screenshot Builder";
 			sourceTree = "<group>";
@@ -192,6 +200,11 @@
 				TargetAttributes = {
 					9045D18322190E1300AB7291 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					9045D19522190E1500AB7291 = {
 						CreatedOnToolsVersion = 10.1;
@@ -256,6 +269,8 @@
 			files = (
 				9045D18A22190E1300AB7291 /* ViewController.swift in Sources */,
 				9045D18822190E1300AB7291 /* AppDelegate.swift in Sources */,
+				9045D1B4221913D100AB7291 /* DragView.swift in Sources */,
+				9045D1B7221B89D500AB7291 /* ScreenshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,16 +436,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Screenshot Builder/Screenshot_Builder.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Screenshot Builder/Screenshot Builder.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Screenshot Builder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Screenshot-Builder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -439,16 +457,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Screenshot Builder/Screenshot_Builder.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Screenshot Builder/Screenshot Builder.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Screenshot Builder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Screenshot-Builder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
