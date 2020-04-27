@@ -41,51 +41,6 @@ class ViewController: NSViewController {
         isPhone8.state = .on
     }
     
-    func catchImageiPhoneX() -> NSView {
-        let imageSize = CGSize(width: 1242, height: 2688)
-        let imageView = NSImageView(frame: NSRect(origin: .zero, size: imageSize))
-        imageView.image = selectedBgImage
-        imageView.imageScaling = .scaleAxesIndependently
-        
-        let textView = NSView()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.wantsLayer = true
-        
-        imageView.addSubview(textView)
-        textView.leftAnchor.constraint(equalTo: imageView.leftAnchor, constant: 50).isActive = true
-        textView.rightAnchor.constraint(equalTo: imageView.rightAnchor, constant: -50).isActive = true
-        textView.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 100).isActive = true
-        textView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-       
-        let label = NSTextField()
-        label.backgroundColor = .clear
-        label.isBezeled = false
-        label.isEditable = false
-        label.alignment = .center
-        label.sizeToFit()
-        label.textColor = captionColor ?? .black
-        label.stringValue = yourCaptionLabel.stringValue
-        label.font = NSFont(name: "KohinoorTelugu-Medium", size: 80)
-        textView.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-
-        label.leftAnchor.constraint(equalTo: textView.leftAnchor, constant: 0).isActive = true
-        label.rightAnchor.constraint(equalTo: textView.rightAnchor, constant: 0).isActive = true
-        label.centerYAnchor.constraint(equalTo: textView.centerYAnchor, constant: 0).isActive = true
-
-        let userSelectedImage = NSImageView(frame: NSRect(x: 120, y: -150, width: 1002, height: 2688))
-        userSelectedImage.image = selectedImage
-        userSelectedImage.imageScaling = .scaleProportionallyUpOrDown
-        imageView.addSubview(userSelectedImage)
-        
-        let iPhoneXImageView = NSImageView(frame: NSRect(x: 50, y: -150, width: 1142, height: 2688))
-        iPhoneXImageView.image = NSImage(named: "iPhoneX-black")
-        iPhoneXImageView.imageScaling = .scaleProportionallyUpOrDown
-        imageView.addSubview(iPhoneXImageView)
-     
-        
-        return imageView
-    }
 
     @IBAction func resetAll(_ sender: Any) {
         selectedImage = nil
