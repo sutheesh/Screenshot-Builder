@@ -17,10 +17,20 @@ class ViewController: NSViewController {
     @IBOutlet weak var yourCaptionLabel: NSTextField!
     @IBOutlet weak var userCaptionInput: NSTextField!
     @IBOutlet weak var imagePicker: NSColorWell!
+    @IBOutlet weak var convertableView: NSView!
+    @IBOutlet weak var isPhone8: NSSwitch!
+    @IBOutlet weak var skeltonImageView: NSImageView!
+    @IBOutlet weak var selectedImageViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var selectedImageViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var selectedImageViewTop: NSLayoutConstraint!
+    @IBOutlet weak var selectedImageViewBottom: NSLayoutConstraint!
+
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
     var selectedImage: NSImage?
     var selectedBgImage: NSImage?
     var captionColor:NSColor?
+    var savedImageHeight = 2688
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +38,7 @@ class ViewController: NSViewController {
         userCaptionInput.delegate = self
         allViews.isHidden = true
         imagePicker.color = .black
+        isPhone8.state = .on
     }
     
     func catchImageiPhoneX() -> NSView {
@@ -86,9 +97,9 @@ class ViewController: NSViewController {
     }
     
     @IBAction func downloadSave(_ sender: Any) {
-        let imageSize = CGSize(width: 1242, height: 2688)
+        let imageSize = CGSize(width: 1242, height: savedImageHeight)
         saveFolderSelection { (url) in
-            if self.catchImageiPhoneX().snapshot.resizedImageTo(newSize: imageSize)?.savePNG(to: url) ?? false {
+            if self.convertableView.snapshot.resizedImageTo(newSize: imageSize)?.savePNG(to: url) ?? false {
                 ScreenshotHelper().dialogOKCancel(question: "Saved Successfully", text: "Your Screenshot has been successfully saved!.")
             }
         }
@@ -107,6 +118,25 @@ class ViewController: NSViewController {
     {
         captionColor = sender.color
         yourCaptionLabel.textColor = captionColor
+    }
+    
+    @IBAction func iPhone8(_ sender: Any) {
+        if isPhone8.state == .on {
+            skeltonImageView.image = NSImage(named: "iPhone8Plus-black")
+            selectedImageViewTop.constant = 54
+            selectedImageViewBottom.constant = 54
+            imageHeightConstraint.constant = 552
+            savedImageHeight = 2208
+
+        }else {
+            skeltonImageView.image = NSImage(named: "iPhoneX-black")
+            imageHeightConstraint.constant = 672
+            selectedImageViewTop.constant = 15
+            selectedImageViewBottom.constant = 15
+            savedImageHeight = 2688
+        }
+        
+        resetAll(sender)
     }
     
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Screenshot_Builder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="916" height="822"/>
+                        <rect key="frame" x="0.0" y="0.0" width="916" height="702"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-ix-g5z">
-                                <rect key="frame" x="403" y="356" width="110" height="110"/>
+                                <rect key="frame" x="403" y="296" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="LXf-9E-0sV"/>
                                     <constraint firstAttribute="height" constant="110" id="qUH-r7-e1K"/>
@@ -719,35 +719,50 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="upload" id="6XR-CS-cr1"/>
                             </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dZp-2c-KIs" customClass="DropView" customModule="Screenshot_Builder" customModuleProvider="target">
-                                <rect key="frame" x="383" y="336" width="150" height="150"/>
+                                <rect key="frame" x="383" y="276" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="NXI-5V-vQF"/>
                                     <constraint firstAttribute="height" constant="150" id="XQS-Pj-0GO"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="xMz-Dw-SwM">
-                                <rect key="frame" x="0.0" y="0.0" width="916" height="722"/>
+                                <rect key="frame" x="0.0" y="0.0" width="916" height="602"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="OiZ-5a-s5i">
-                                        <rect key="frame" x="303" y="25" width="310" height="672"/>
+                                        <rect key="frame" x="303" y="25" width="310" height="552"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-1i-o6s">
-                                                <rect key="frame" x="-3" y="-3" width="316" height="678"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" imageFrameStyle="photo" image="tv-background" id="TAP-Sp-fFs"/>
+                                                <rect key="frame" x="-3" y="-3" width="316" height="558"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageFrameStyle="photo" image="12" id="TAP-Sp-fFs"/>
                                             </imageView>
-                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZM8-Et-P2L">
-                                                <rect key="frame" x="35" y="-50" width="240" height="672"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="testImage" id="Y7S-Qx-8nv"/>
-                                            </imageView>
-                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-Rc-bjr">
-                                                <rect key="frame" x="20" y="-50" width="270" height="672"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iPhoneX-black" id="QxV-9c-3FI"/>
-                                            </imageView>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="gDD-Qg-zkj">
+                                                <rect key="frame" x="20" y="20" width="270" height="416"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZM8-Et-P2L">
+                                                        <rect key="frame" x="0.0" y="54" width="270" height="308"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="testimage-8plus" id="Y7S-Qx-8nv"/>
+                                                    </imageView>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-Rc-bjr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="416"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="top" imageScaling="proportionallyDown" image="iPhone8Plus-black" id="QxV-9c-3FI"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ZM8-Et-P2L" firstAttribute="top" secondItem="gDD-Qg-zkj" secondAttribute="top" constant="54" id="Bwj-0n-l1d"/>
+                                                    <constraint firstItem="ZM8-Et-P2L" firstAttribute="leading" secondItem="gDD-Qg-zkj" secondAttribute="leading" id="Kna-HD-Tvh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yLf-Rc-bjr" secondAttribute="trailing" id="TNx-aO-9so"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yLf-Rc-bjr" secondAttribute="bottom" id="WcU-54-13a"/>
+                                                    <constraint firstItem="yLf-Rc-bjr" firstAttribute="top" secondItem="gDD-Qg-zkj" secondAttribute="top" id="gec-yy-c2c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZM8-Et-P2L" secondAttribute="trailing" id="hum-BP-FLJ"/>
+                                                    <constraint firstItem="yLf-Rc-bjr" firstAttribute="leading" secondItem="gDD-Qg-zkj" secondAttribute="leading" id="jcH-c6-HYy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZM8-Et-P2L" secondAttribute="bottom" constant="54" id="laK-Um-EsX"/>
+                                                </constraints>
+                                            </customView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="JtO-7d-J48">
-                                                <rect key="frame" x="20" y="566" width="270" height="96"/>
+                                                <rect key="frame" x="20" y="446" width="270" height="90"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="s9S-dB-ka6">
-                                                        <rect key="frame" x="-2" y="34" width="274" height="28"/>
+                                                        <rect key="frame" x="-2" y="31" width="274" height="28"/>
                                                         <textFieldCell key="cell" selectable="YES" alignment="center" placeholderString="Your caption here" id="npP-gC-jt3">
                                                             <font key="font" size="20" name="KohinoorTelugu-Medium"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -758,33 +773,29 @@
                                                 <constraints>
                                                     <constraint firstItem="s9S-dB-ka6" firstAttribute="leading" secondItem="JtO-7d-J48" secondAttribute="leading" id="RY7-GV-N15"/>
                                                     <constraint firstAttribute="trailing" secondItem="s9S-dB-ka6" secondAttribute="trailing" id="de5-Yo-TLH"/>
-                                                    <constraint firstAttribute="height" constant="96" id="qjH-wq-tGl"/>
+                                                    <constraint firstAttribute="height" constant="90" id="qjH-wq-tGl"/>
                                                     <constraint firstItem="s9S-dB-ka6" firstAttribute="centerY" secondItem="JtO-7d-J48" secondAttribute="centerY" id="ykK-64-nYl"/>
                                                 </constraints>
                                             </customView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="yLf-Rc-bjr" firstAttribute="top" secondItem="OiZ-5a-s5i" secondAttribute="top" constant="50" id="2ag-mJ-4oU"/>
                                             <constraint firstAttribute="trailing" secondItem="u3h-1i-o6s" secondAttribute="trailing" id="54g-cW-9L3"/>
-                                            <constraint firstItem="ZM8-Et-P2L" firstAttribute="leading" secondItem="yLf-Rc-bjr" secondAttribute="leading" constant="15" id="8mD-bJ-eBu"/>
+                                            <constraint firstItem="gDD-Qg-zkj" firstAttribute="top" secondItem="JtO-7d-J48" secondAttribute="bottom" constant="10" id="6Ie-cC-zo1"/>
                                             <constraint firstAttribute="trailing" secondItem="JtO-7d-J48" secondAttribute="trailing" constant="20" id="CLw-wa-iTT"/>
-                                            <constraint firstAttribute="height" constant="672" id="EHf-z1-Ml7"/>
+                                            <constraint firstAttribute="height" constant="552" id="EHf-z1-Ml7"/>
                                             <constraint firstItem="u3h-1i-o6s" firstAttribute="leading" secondItem="OiZ-5a-s5i" secondAttribute="leading" id="FoN-Nb-l6r"/>
-                                            <constraint firstAttribute="trailing" secondItem="yLf-Rc-bjr" secondAttribute="trailing" constant="20" id="Ko5-xN-h1e"/>
-                                            <constraint firstItem="JtO-7d-J48" firstAttribute="top" secondItem="OiZ-5a-s5i" secondAttribute="top" constant="10" id="NM1-ER-MHY"/>
-                                            <constraint firstItem="ZM8-Et-P2L" firstAttribute="top" secondItem="yLf-Rc-bjr" secondAttribute="top" id="OWs-xI-iSQ"/>
-                                            <constraint firstItem="ZM8-Et-P2L" firstAttribute="trailing" secondItem="yLf-Rc-bjr" secondAttribute="trailing" constant="-15" id="TvE-Rl-8Vl"/>
-                                            <constraint firstItem="yLf-Rc-bjr" firstAttribute="leading" secondItem="OiZ-5a-s5i" secondAttribute="leading" constant="20" id="XSD-Fh-fFw"/>
+                                            <constraint firstItem="gDD-Qg-zkj" firstAttribute="leading" secondItem="OiZ-5a-s5i" secondAttribute="leading" constant="20" id="JF9-FK-f3I"/>
+                                            <constraint firstItem="JtO-7d-J48" firstAttribute="top" secondItem="OiZ-5a-s5i" secondAttribute="top" constant="16" id="NM1-ER-MHY"/>
+                                            <constraint firstAttribute="bottom" secondItem="gDD-Qg-zkj" secondAttribute="bottom" constant="20" id="RFU-cD-4YY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gDD-Qg-zkj" secondAttribute="trailing" constant="20" id="auF-Od-yJg"/>
                                             <constraint firstAttribute="bottom" secondItem="u3h-1i-o6s" secondAttribute="bottom" id="jFw-lf-UXx"/>
                                             <constraint firstItem="JtO-7d-J48" firstAttribute="leading" secondItem="OiZ-5a-s5i" secondAttribute="leading" constant="20" id="lIG-D9-fQp"/>
-                                            <constraint firstItem="ZM8-Et-P2L" firstAttribute="bottom" secondItem="yLf-Rc-bjr" secondAttribute="bottom" id="s60-Vv-r0c"/>
                                             <constraint firstAttribute="width" constant="310.5" id="vJ0-te-x1b"/>
                                             <constraint firstItem="u3h-1i-o6s" firstAttribute="top" secondItem="OiZ-5a-s5i" secondAttribute="top" id="xe1-RV-TQa"/>
-                                            <constraint firstAttribute="bottom" secondItem="yLf-Rc-bjr" secondAttribute="bottom" constant="-50" id="yGI-kK-XMF"/>
                                         </constraints>
                                     </customView>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="V9Q-me-URe">
-                                        <rect key="frame" x="642" y="632" width="240" height="60"/>
+                                        <rect key="frame" x="642" y="512" width="240" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="mcO-oQ-vdr"/>
                                         </constraints>
@@ -795,7 +806,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-Gb-29G">
-                                        <rect key="frame" x="14" y="625" width="147" height="32"/>
+                                        <rect key="frame" x="14" y="505" width="147" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="8b9-E1-4ZF"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="i1j-rE-MCE"/>
@@ -809,7 +820,7 @@
                                         </connections>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-bd-ree">
-                                        <rect key="frame" x="640" y="567" width="134" height="40"/>
+                                        <rect key="frame" x="640" y="447" width="134" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="yiz-zK-Rja"/>
                                         </constraints>
@@ -820,7 +831,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="KE2-LV-EA8">
-                                        <rect key="frame" x="787" y="567" width="95" height="40"/>
+                                        <rect key="frame" x="787" y="447" width="95" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="95" id="Cql-F4-y4b"/>
                                             <constraint firstAttribute="height" constant="40" id="Q4N-7N-uBD"/>
@@ -849,7 +860,7 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="h7o-hQ-dNq">
-                                <rect key="frame" x="0.0" y="722" width="916" height="100"/>
+                                <rect key="frame" x="0.0" y="602" width="916" height="100"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-5U-ng3">
                                         <rect key="frame" x="9" y="23" width="112" height="51"/>
@@ -879,14 +890,35 @@
                                             <action selector="downloadSave:" target="XfG-lQ-9wD" id="bPe-mC-eV2"/>
                                         </connections>
                                     </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6S1-O0-vq7">
+                                        <rect key="frame" x="163" y="42" width="89" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Iphone -8plus" id="pb7-nH-c0W">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-gv-0Gb">
+                                        <rect key="frame" x="281" y="38" width="42" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="hvU-St-6B1"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="iPhone8:" target="XfG-lQ-9wD" id="Vwu-04-EAO"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="HsO-gv-0Gb" firstAttribute="leading" secondItem="6S1-O0-vq7" secondAttribute="trailing" constant="33" id="0Dk-Uq-GAt"/>
                                     <constraint firstItem="96q-43-vto" firstAttribute="centerY" secondItem="h7o-hQ-dNq" secondAttribute="centerY" id="Hbe-yR-xkj"/>
+                                    <constraint firstItem="6S1-O0-vq7" firstAttribute="centerY" secondItem="h7o-hQ-dNq" secondAttribute="centerY" id="IAv-zw-ft8"/>
                                     <constraint firstItem="96q-43-vto" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eiP-5U-ng3" secondAttribute="trailing" constant="12" symbolic="YES" id="ZLu-SQ-mYI"/>
+                                    <constraint firstItem="HsO-gv-0Gb" firstAttribute="centerY" secondItem="h7o-hQ-dNq" secondAttribute="centerY" id="h1E-p3-NBt"/>
                                     <constraint firstItem="eiP-5U-ng3" firstAttribute="leading" secondItem="h7o-hQ-dNq" secondAttribute="leading" constant="15" id="idl-fF-VJ9"/>
                                     <constraint firstAttribute="trailing" secondItem="96q-43-vto" secondAttribute="trailing" constant="20" id="lxo-Fn-tTt"/>
                                     <constraint firstAttribute="height" constant="100" id="p13-uT-kzj"/>
                                     <constraint firstItem="eiP-5U-ng3" firstAttribute="centerY" secondItem="h7o-hQ-dNq" secondAttribute="centerY" id="rrI-O1-WgX"/>
+                                    <constraint firstItem="6S1-O0-vq7" firstAttribute="leading" secondItem="eiP-5U-ng3" secondAttribute="trailing" constant="50" id="wKe-1O-to3"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -907,23 +939,30 @@
                     <connections>
                         <outlet property="allViews" destination="xMz-Dw-SwM" id="IJF-9N-y07"/>
                         <outlet property="bgImageView" destination="u3h-1i-o6s" id="TeX-gm-rhG"/>
+                        <outlet property="convertableView" destination="OiZ-5a-s5i" id="AEw-8T-oaQ"/>
                         <outlet property="dragView" destination="dZp-2c-KIs" id="p3K-u6-oxB"/>
+                        <outlet property="imageHeightConstraint" destination="EHf-z1-Ml7" id="Lrs-fS-gk1"/>
                         <outlet property="imagePicker" destination="KE2-LV-EA8" id="wuH-7Y-BPv"/>
+                        <outlet property="isPhone8" destination="HsO-gv-0Gb" id="2vs-KG-8Bn"/>
                         <outlet property="selectedImageView" destination="ZM8-Et-P2L" id="hzv-gl-Jjz"/>
-                        <outlet property="skeltonImageView" destination="yLf-Rc-bjr" id="mBi-UU-bHt"/>
+                        <outlet property="selectedImageViewBottom" destination="laK-Um-EsX" id="waz-9t-Om9"/>
+                        <outlet property="selectedImageViewLeading" destination="Kna-HD-Tvh" id="ArF-dq-tXN"/>
+                        <outlet property="selectedImageViewTop" destination="Bwj-0n-l1d" id="qwS-JI-uKQ"/>
+                        <outlet property="selectedImageViewTrailing" destination="hum-BP-FLJ" id="jXK-4r-lyz"/>
+                        <outlet property="skeltonImageView" destination="yLf-Rc-bjr" id="IwE-nN-tQC"/>
                         <outlet property="userCaptionInput" destination="V9Q-me-URe" id="FlB-93-7fm"/>
                         <outlet property="yourCaptionLabel" destination="s9S-dB-ka6" id="z6a-Ha-7Ss"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="932"/>
+            <point key="canvasLocation" x="99" y="953.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="iPhoneX-black" width="720" height="1444"/>
-        <image name="testImage" width="1242" height="2688"/>
-        <image name="tv-background" width="800" height="450"/>
+        <image name="12" width="4384" height="3012"/>
+        <image name="iPhone8Plus-black" width="357.5" height="545"/>
+        <image name="testimage-8plus" width="1242" height="2208"/>
         <image name="upload" width="800" height="800"/>
     </resources>
 </document>
